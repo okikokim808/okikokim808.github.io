@@ -144,6 +144,10 @@ p{
     padding-bottom: 10px;
     border-bottom: 3px solid #678;
 }
+.quotes{
+    height: 100px;
+}
+
 /* contact form */
 .part5{
     text-align: center;

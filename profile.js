@@ -7,10 +7,10 @@ var quotes = [quote1, quote2, quote3];
 var counter = 0;
 
 function showQuote(){
-    $('.quotes').fadeTo(4000, 0, function(){
+    $('.quotes').fadeTo(5000, 0, function(){
         this.innerHTML=quotes[counter];
         counter = ++counter % quotes.length;
-        $(this).fadeTo(4000, 1, showQuote);
+        $(this).fadeTo(5000, 1, showQuote);
     });
     // $('#quotes').fadeIn(2000);
     // $('#quotes').delay(2000);
@@ -26,3 +26,5 @@ function scrollToSection(e) {
     }, 800);
   }
   $('[data-scroll]').on('click', scrollToSection);
+
+  

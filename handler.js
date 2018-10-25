@@ -33,7 +33,7 @@ module.exports.staticSiteMailer = (event, context, callback) => {
   sendEmail(formData, function(err, data) {
     const response = {
       statusCode: err ? 500 : 200,
-      headers: {
+      header: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': 'https://okikokim808.github.io',
       },

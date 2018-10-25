@@ -24,8 +24,8 @@ function scrollToSection(e) {
     $('html, body').animate({
       scrollTop: div.offset().top
     }, 800);
-}
-$('[data-scroll]').on('click', scrollToSection);
+  }
+  $('[data-scroll]').on('click', scrollToSection);
 
 (() => {
   const form = document.querySelector('form');

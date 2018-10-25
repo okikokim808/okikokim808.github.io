@@ -1,0 +1,12 @@
+{
+  "name": "static-site-mailer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/okikokim808/project-0.git",
+  "author": "okikokim808 <kikomanistheman15@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.342.0",
+    "serverless": "^1.32.0"
+  }
+}

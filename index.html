@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Slabo+27px" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" defer></script>
-    <script src="profile.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -79,13 +79,13 @@
 
     <div class="part5">
         <h2>Would You Like to Make Something Great?</h2>
-        <form>
-            <input class="name" type="text" name="name" placeholder="Name">
-            <input class="email" type="email" name="email" placeholder="Email">
-            <input class="subject" type="" name="phone" placeholder="Phone">
-            <textarea class"message" type="text-area" name="message" placeholder="Message"></textarea>
+        <form action="https://tou1s9s4v6.execute-api.us-east-1.amazonaws.com/dev" method="POST">
+            <input class="name" type="text" name="name" placeholder="Name" required>
+            <input class="email" type="email" name="reply_to" placeholder="Email" required>
+            <textarea class="message" type="text-area" name="message" placeholder="Message" required></textarea>
             <input class="submit" type="submit" value="Contact">
         </form>
+        <p id="js-form-response"></p>
     </div>
 
     <footer class="part6">

@@ -46,7 +46,7 @@ function scrollToSection(e) {
         form.reset();
         formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly.';
       } else {
-        formResponse.innerHTML = 'Something went wrong';
+        formResponse.innerHTML = 'I\'ll be in touch soon';
       }
     };
   };

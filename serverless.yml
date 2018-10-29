@@ -1,4 +1,4 @@
-service: static-site-mailer # NOTE: update this with your service name
+service: static-site-mailer
 
 provider:
   name: aws

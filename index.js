@@ -12,9 +12,6 @@ function showQuote(){
         counter = ++counter % quotes.length;
         $(this).fadeTo(5000, 1, showQuote);
     });
-    // $('#quotes').fadeIn(2000);
-    // $('#quotes').delay(2000);
-    // $('#quotes').fadeOut(2000);
 }
 showQuote();
 
@@ -38,28 +35,21 @@ function scrollToSection(e) {
     const formElements = Array.from(form);
     formElements.map(input => (data[input.name] = input.value));
 
-    console.log(JSON.stringify(data));
-
     var xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action, true);
     xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-    console.log(xhr);
-    // Send the collected data as JSON
+    
     xhr.send(JSON.stringify(data));
 
-    // Callback function
-    // xhr.onloadend = response => {
-    //   if (response.target.status === 200) {
-    //     // The form submission was successful
-    //     form.reset();
-    //     formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly.';
-    //   } else {
-    //     // The form submission failed
-    //     formResponse.innerHTML = 'Something went wrong';
-    //     console.error(JSON.parse(response.target.response).message);
-    //   }
-    // };
+    xhr.onloadend = response => {
+      if (response.target.status === 200) {
+        form.reset();
+        formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly.';
+      } else {
+        formResponse.innerHTML = 'Something went wrong';
+        console.error(JSON.parse(response.target.response).message);
+      }
+    };
   };
 })();

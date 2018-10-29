@@ -35,7 +35,7 @@ module.exports.staticSiteMailer = (event, context, callback) => {
       statusCode: err ? 500 : 200,
       header: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://okikokim808.github.io',
+        'Allow-Access-Control-Origin': 'https://okikokim808.github.io',
       },
       body: JSON.stringify({
         message: err ? err.message : data,

@@ -29,7 +29,7 @@ function scrollToSection(e) {
 
 (() => {
   const form = document.querySelector('form');
-  const formResponse = document.querySelector('js-form-response');
+  const formResponse = document.getElementById('js-form-response');
 
   form.onsubmit = e => {
     e.preventDefault();
@@ -45,8 +45,8 @@ function scrollToSection(e) {
     // Construct an HTTP request
     var xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action, true);
-    xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
-    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhr.setRequestHeader('Content-Type', 'application/json');
 
     // Send the collected data as JSON
     xhr.send(JSON.stringify(data));

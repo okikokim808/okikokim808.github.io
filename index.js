@@ -50,16 +50,16 @@ function scrollToSection(e) {
     xhr.send(JSON.stringify(data));
 
     // Callback function
-    xhr.onloadend = response => {
-      if (response.target.status === 200) {
-        // The form submission was successful
-        form.reset();
-        formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly.';
-      } else {
-        // The form submission failed
-        formResponse.innerHTML = 'Something went wrong';
-        console.error(JSON.parse(response.target.response).message);
-      }
-    };
+    // xhr.onloadend = response => {
+    //   if (response.target.status === 200) {
+    //     // The form submission was successful
+    //     form.reset();
+    //     formResponse.innerHTML = 'Thanks for the message. I’ll be in touch shortly.';
+    //   } else {
+    //     // The form submission failed
+    //     formResponse.innerHTML = 'Something went wrong';
+    //     console.error(JSON.parse(response.target.response).message);
+    //   }
+    // };
   };
 })();

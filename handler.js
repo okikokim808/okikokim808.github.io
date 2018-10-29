@@ -19,7 +19,7 @@ function sendEmail(formData, callback) {
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: 'New message from https://www.okikokim808.github.io',
+        Data: 'New message from https://okikokim808.github.io',
       },
     },
   };
@@ -35,7 +35,7 @@ module.exports.staticSiteMailer = (event, context, callback) => {
       statusCode: err ? 500 : 200,
       header: {
         'Content-Type': 'application/json',
-        'Allow-Access-Control-Origin': 'https://www.okikokim808.github.io',
+        'Allow-Access-Control-Origin': 'https://okikokim808.github.io/',
       },
       body: JSON.stringify({
         message: err ? err.message : data,

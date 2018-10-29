@@ -26,11 +26,10 @@ function scrollToSection(e) {
 
 (() => {
   const form = document.querySelector('form');
-  const formResponse = document.querySelector('js-form-response');
+  const formResponse = document.getElementById('js-form-response');
 
   form.onsubmit = e => {
     e.preventDefault();
-    $(this).children('.submit').remove();
     const data = {};
     const formElements = Array.from(form);
     formElements.map(input => (data[input.name] = input.value));

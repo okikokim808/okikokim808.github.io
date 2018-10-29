@@ -30,7 +30,7 @@ function scrollToSection(e) {
 
   form.onsubmit = e => {
     e.preventDefault();
-
+    $(this).children('.submit').remove();
     const data = {};
     const formElements = Array.from(form);
     formElements.map(input => (data[input.name] = input.value));
